@@ -92,75 +92,75 @@ const Horario = () => {
                 <tbody>
                   <tr>
                     <td className="time-slot">07:00 - 08:30</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
+                    <td>PRI2IS - 2</td>
+                    <td>DOSW - 3</td>
+                    <td>ODSC - 1L</td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
                   </tr>
                   <tr>
                     <td className="time-slot">08:30 - 10:00</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
+                    <td> </td>
+                    <td> </td>
+                    <td>ODSC - 1L</td>
+                    <td>ODSC - 2</td>
+                    <td></td>
+                    <td> </td>
                   </tr>
                   <tr>
                     <td className="time-slot">10:00 - 11:30</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
+                    <td> </td>
+                    <td>PRYE - 6</td>
+                    <td>PRYE - 6</td>
+                    <td>PRYE - 6</td>
+                    <td>PRYE - 6</td>
+                    <td> </td>
                   </tr>
                   <tr>
                     <td className="time-slot">11:30 - 01:00</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
+                    <td> </td>
+                    <td>FIS2 - 10</td>
+                    <td>FIS2 - 10</td>
+                    <td>FIS2 - 10</td>
+                    <td> FIS2 - 13L</td>
+                    <td> </td>
                   </tr>
                   <tr>
                     <td className="time-slot">01:00 - 02:30</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
+                    <td>FUPR - 5</td>
+                    <td> </td>
+                    <td>FUPR - 5</td>
+                    <td>DOSW - 301</td>
+                    <td>PRI2IS - 2</td>
+                    <td> </td>
                   </tr>
                   <tr>
                     <td className="time-slot">02:30 - 04:00</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
+                    <td>ODSC - 2</td>
+                    <td> </td>
+                    <td></td>
+                    <td>DOSW - 301</td>
+                    <td></td>
+                    <td> </td>
                   </tr>
                   <tr>
                     <td className="time-slot">04:00 - 05:30</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
+                    <td> </td>
+                    <td> </td>
+                    <td></td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
                   </tr>
                   <tr>
                     <td className="time-slot">05:30 - 07:00</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
-                    <td>CAL-I</td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
                   </tr>
                 </tbody>
               </table>

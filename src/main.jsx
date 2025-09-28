@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
 import Dashboard from "./components/Dashboard/Dashboard";
-import Horario from "./components/Horario/Horario"; // Importa el componente Horario
+import Horario from "./components/Horario/Horario"; 
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
