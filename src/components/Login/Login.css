@@ -1,20 +1,26 @@
+/* General */
+html,
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
-/* Página */
+/* Página completa */
 .login-page {
   background: #f3f4f6;
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden; /* evita scroll innecesario */
 }
 
-/* Fondo claro */
+/* Fondo decorativo */
 .background-light {
   position: absolute;
   bottom: 0;
@@ -23,30 +29,27 @@ body {
   height: 100%;
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23fdecec' fill-opacity='1' d='M0,192L48,170.7C96,149,192,107,288,112C384,117,480,171,576,192C672,213,768,203,864,186.7C960,171,1056,149,1152,133.3C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'></path></svg>")
     no-repeat bottom;
+  background-size: cover;
   z-index: 0;
 }
 
-/* Fondo oscuro (lo podrías usar para modo dark si quieres) */
-.background-dark {
-  display: none; /* oculto por defecto */
-}
-
-/* Contenedor formulario */
+/* Contenedor */
 .form-container {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   padding: 20px;
 }
 
 /* Caja del formulario */
 .form-box {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(6px);
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 /* Header */
@@ -60,12 +63,12 @@ body {
 .form-header h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #1f2937;
+  color: #767575;
   margin: 0;
 }
 
 .form-header img {
-  height: 50px;
+  height: 60px;
 }
 
 /* Inputs */
@@ -77,16 +80,18 @@ body {
   display: block;
   font-size: 14px;
   margin-bottom: 6px;
-  color: #374151;
+  color: #666666;
 }
 
 .form-group input {
   width: 100%;
-  padding: 12px;
+  padding: 14px; /* mismo que el botón */
   border: 1px solid #d1d5db;
   border-radius: 8px;
   font-size: 14px;
   outline: none;
+  box-sizing: border-box; /* asegura que padding no rompa el ancho */
+  display: block;
 }
 
 .form-group input:focus {
@@ -97,7 +102,7 @@ body {
 /* Botón */
 .btn-submit {
   width: 100%;
-  padding: 14px;
+  padding: 14px; /* mismo que input */
   background: #991b1b;
   color: #fff;
   font-weight: bold;
@@ -107,6 +112,8 @@ body {
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0 5px 15px rgba(153, 27, 27, 0.3);
+  box-sizing: border-box;
+  display: block;
 }
 
 .btn-submit:hover {

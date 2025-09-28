@@ -1,7 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
 export default function Dashboard() {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
+  const handleLogout = () => {
+    // Aquí puedes agregar lógica de logout (limpiar tokens, etc.)
+    navigate("/"); // Redirige a la página de login
+  };
+
   return (
     <div className="dashboard">
       {/* Sidebar */}
@@ -16,19 +28,25 @@ export default function Dashboard() {
             <li className="active">
               <span className="material-icons">home</span> INICIO
             </li>
-            <li>
+            <li 
+              className="nav-item clickable"
+              onClick={() => handleNavigation("/horario")}
+            >
               <span className="material-icons">calendar_today</span> HORARIO
             </li>
-            <li>
+            <li className="nav-item clickable">
               <span className="material-icons">traffic</span> SEMÁFORO
             </li>
-            <li>
+            <li className="nav-item clickable">
               <span className="material-icons">description</span> SOLICITUDES
             </li>
           </ul>
         </nav>
 
-        <div className="logout">
+        <div 
+          className="logout clickable" 
+          onClick={handleLogout}
+        >
           <span className="material-icons">exit_to_app</span> SALIR
         </div>
       </aside>
@@ -38,8 +56,8 @@ export default function Dashboard() {
         {/* Header */}
         <header className="header">
           <img
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDryXtmwLoDer4LXOBoM6P77TBtj4DRfwWH1txbtnx6g8DPTxak9Qzn_-E5Hh8JMrRg1bvxIvOkmWMWJab1ZJuq2x65ai-u-kMpFXC--eSoAuWqdWaK7xwbB4-8cgKHLuTJCk_CJRPu7gvp07ZSZS9en8iid_wRfUTqX0g9hs0JdnFbmYn8atp9B7LFCj_N9syzpOVi_rVdo47M2YXyqTYo0Ffh0teTSrmd10g1o4orkGJjSWb5Eh0gYHvPNbjPXC-cEkbj8wGEiHY"
-            alt="Logo Universidad"
+            src="https://img.genial.ly/60942d42948f6b0f9f6d906d/b8e7c67d-b995-4bd0-befe-a271a218ef78.png"
+            alt="Logo Escuela Colombiana de Ingeniería"
           />
           <div className="profile-icon">
             <span className="material-icons">person_outline</span>
@@ -48,65 +66,45 @@ export default function Dashboard() {
 
         {/* Content */}
         <div className="content">
-          <h2>Estado de tu cuenta</h2>
-          <div className="cards">
-            {/* Solicitudes */}
-            <div className="card">
-              <h3>Solicitudes</h3>
-              <div className="card-actions">
-                <button className="btn green">L-CAT GRUPO 2</button>
-                <button className="btn green">L-CAT GRUPO 2</button>
-                <button className="btn red">L-CAT GRUPO 2</button>
-                <button className="btn red">L-CAT GRUPO 2</button>
+          <h2>Enlace académico</h2>
+          
+          {/* Tarjeta ancha del estudiante */}
+          <div className="student-wide-card">
+            <div className="student-header">
+              <div className="student-avatar-compact">
+                <span className="material-icons">person</span>
               </div>
+              <h3 className="student-name-wide">KEVIN CUITIVA</h3>
             </div>
-
-            {/* Horario */}
-            <div className="card">
-              <h3>Horario</h3>
-              <table>
-                <thead>
-                  <tr>
-                    <th colSpan="2">Lunes</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>7-8:30</td>
-                    <td>CALI</td>
-                  </tr>
-                  <tr>
-                    <td>8:30-10</td>
-                    <td>CALI</td>
-                  </tr>
-                  <tr>
-                    <td>10-11:30</td>
-                    <td>CALI</td>
-                  </tr>
-                  <tr>
-                    <td>11:30-1</td>
-                    <td>CALI</td>
-                  </tr>
-                  <tr>
-                    <td>1-2:30</td>
-                    <td>CALI</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            {/* Semáforo */}
-            <div className="card">
-              <h3>Semáforo</h3>
-              <p><strong>Materias cursadas:</strong> 10</p>
-              <p><strong>Materias por cursar:</strong> 4</p>
-              <p><strong>Materias repetidas:</strong> 2</p>
-              <p><strong>Pensum:</strong> 2025-2</p>
-              <p><strong>Créditos activos:</strong> 16</p>
+            
+            <div className="student-details-horizontal">
+              <div className="detail-column">
+                <div className="detail-item-wide">
+                  <span className="detail-label-wide">Nombre completo:</span>
+                  <span className="detail-value-wide">Kevin Arturo Cuitiva Pardo</span>
+                </div>
+                
+                <div className="detail-item-wide">
+                  <span className="detail-label-wide">Semestre:</span>
+                  <span className="detail-value-wide">6</span>
+                </div>
+              </div>
+              
+              <div className="detail-column">
+                <div className="detail-item-wide">
+                  <span className="detail-label-wide">Carrera:</span>
+                  <span className="detail-value-wide">Ingeniería de Sistemas</span>
+                </div>
+                
+                <div className="detail-item-wide">
+                  <span className="detail-label-wide">ID Estudiantil:</span>
+                  <span className="detail-value-wide student-id-wide">2023-00123456</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </main>
-    </div>
+    </div>  
   );
 }

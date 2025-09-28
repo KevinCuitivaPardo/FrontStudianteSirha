@@ -1,29 +1,36 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // 👈 Importar
 import "./Login.css";
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // 👈 Hook para redirigir
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("ID Usuario:", username);
-    console.log("Contraseña:", password);
-    alert(`Usuario: ${username}\nContraseña: ${password}`);
+
+    // Aquí podrías validar usuario y contraseña
+    if (username && password) {
+      console.log("ID Usuario:", username);
+      console.log("Contraseña:", password);
+
+      // Redirigir al dashboard
+      navigate("/dashboard");
+    } else {
+      alert("Por favor ingresa usuario y contraseña");
+    }
   };
 
   return (
     <div className="login-page">
-      {/* Fondo decorativo */}
       <div className="background-light"></div>
-
-      {/* Contenedor del formulario */}
       <div className="form-container">
         <div className="form-box">
           <div className="form-header">
             <h1>SIRHA</h1>
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYo3yrEh9M9NibQfM7mWeHIHgaJI8h0ocTM-PP_ApGnFN6i9ZTNIafiBSC5Ar4DP6w21aZJX30O_pebz8MX89A7IQblMZohDzfJmsJwYHSdmynohhBBc09fMbTlGU38GxmDaf_FK0ghQFClT94EQiFE-pnzxVWu6JR41b_mRhKyaVbESd8ntiBg34ZmJzs7bVp1vPX4Dz6kHRqoxvuf8awF04w8JgdGCvBfdwmH-KOizmVdeOzxAFlFiosb4DcnGgY03GesAyHDZMZ"
+              src="https://img.genial.ly/60942d42948f6b0f9f6d906d/b8e7c67d-b995-4bd0-befe-a271a218ef78.png"
               alt="Logo"
             />
           </div>
