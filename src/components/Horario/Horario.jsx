@@ -9,6 +9,17 @@ const Horario = () => {
     navigate(path);
   };
 
+  // Función para manejar el logout con confirmación
+  const handleLogout = () => {
+    const confirmLogout = window.confirm("¿Estás seguro de que quieres salir de la aplicación?");
+    
+    if (confirmLogout) {
+      // Aquí puedes agregar lógica adicional como limpiar localStorage, etc.
+      navigate("/");
+    }
+    // Si el usuario cancela, no hace nada
+  };
+
   return (
     <div className="horario-container">
       <div className="dashboard">
@@ -51,9 +62,10 @@ const Horario = () => {
             </ul>
           </nav>
 
+          {/* Cambio aquí: usar handleLogout en lugar de handleNavigation directo */}
           <div
             className="logout clickable"
-            onClick={() => handleNavigation("/")}
+            onClick={handleLogout}
           >
             <span className="material-icons">exit_to_app</span>
             SALIR

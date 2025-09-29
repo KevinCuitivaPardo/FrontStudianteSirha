@@ -9,9 +9,15 @@ export default function Dashboard() {
     navigate(path);
   };
 
+  // Función para manejar el logout con confirmación
   const handleLogout = () => {
-    // Aquí puedes agregar lógica de logout (limpiar tokens, etc.)
-    navigate("/"); // Redirige a la página de login
+    const confirmLogout = window.confirm("¿Estás seguro de que quieres salir de la aplicación?");
+    
+    if (confirmLogout) {
+      // Aquí puedes agregar lógica adicional como limpiar localStorage, etc.
+      navigate("/"); // Redirige a la página de login
+    }
+    
   };
 
   return (
@@ -56,6 +62,7 @@ export default function Dashboard() {
           </ul>
         </nav>
 
+        {/* Cambio aquí: usar handleLogout que incluye la confirmación */}
         <div className="logout clickable" onClick={handleLogout}>
           <span className="material-icons">exit_to_app</span>
           SALIR
@@ -126,4 +133,3 @@ export default function Dashboard() {
     </div>
   );
 }
-
