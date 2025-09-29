@@ -100,7 +100,7 @@ export default function Dashboard() {
 
                 <div className="detail-item-wide">
                   <span className="detail-label-wide">Semestre:</span>
-                  <span className="detail-value-wide">6</span>
+                  <span className="detail-value-wide">1</span>
                 </div>
               </div>
 
@@ -115,7 +115,7 @@ export default function Dashboard() {
                 <div className="detail-item-wide">
                   <span className="detail-label-wide">ID Estudiantil:</span>
                   <span className="detail-value-wide student-id-wide">
-                    2023-00123456
+                    2f0fs0gdd1gf2ds34sd56
                   </span>
                 </div>
               </div>
